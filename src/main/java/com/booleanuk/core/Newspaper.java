@@ -1,23 +1,18 @@
 package com.booleanuk.core;
 
-public class Newspaper {
-    String title;
+public class Newspaper extends Item {
 
-    boolean onLoan = false;
-
-    public Newspaper(String title) {
-        this.title = title;
+    public Newspaper(String title){
+        super(title);
     }
 
-    public boolean isOnLoan() {
-        return onLoan;
-    }
-
-    public String checkIn() {
+    @Override
+    public String checkIn(){
         return "newspapers are not available for loan";
     }
 
-    public String checkOut() {
+    @Override
+    public String checkOut(){
         return "newspapers are not available for loan";
     }
 }
